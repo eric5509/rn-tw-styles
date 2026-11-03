@@ -1,0 +1,64 @@
+{
+  "name": "rn-tw-styles",
+  "version": "1.0.0",
+  "description": "Tailwind-style utility styles for React Native with full TypeScript autocomplete, border radius scale, and an arb() helper for arbitrary values.",
+  "author": "Ibe Emeka Eric (https://github.com/eric5509)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric5509/rn-tw-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eric5509/rn-tw-styles/issues"
+  },
+  "homepage": "https://github.com/eric5509/rn-tw-styles#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node test/smoke.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "react-native",
+    "tailwind",
+    "tailwindcss",
+    "styles",
+    "stylesheet",
+    "utility-first",
+    "typescript",
+    "expo",
+    "border-radius"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.71.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react-native": "^0.74.0",
+    "typescript": "^5.4.0"
+  }
+}
